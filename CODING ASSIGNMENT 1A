@@ -1,0 +1,44 @@
+package assignment;
+
+import java.util.Scanner;
+
+public class Question1A {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//scanner declaration to user input
+		Scanner sc=new Scanner (System.in);
+		// declare the variable for the user prompt
+		double rate;
+		int years;
+		double amount;
+		
+		//user input the yearly interest
+		System.out.print("Enter the yearly interest rate :");
+		rate=sc.nextDouble();
+		System.out.print("");
+		//user input the number of years to loan
+		System.out.print("Enter the number of years as an integer :");
+		years=sc.nextInt();
+		System.out.print("");
+		//user input the amount of loan
+		System.out.print("Enter the loan amount : RM");
+		amount=sc.nextDouble();
+		System.out.print("");
+		
+		//calculate the sum of interest
+		double sum=((rate/100)*amount)*years;
+		//calculate the monthly and total payment
+		double monthly=(rate/100)*amount;
+		//calculate the total payment
+		double total=monthly*(years*12);
+		
+		System.out.printf("The monthly payment is : RM%.2f" , monthly);
+		System.out.println("");
+		System.out.printf("The total payment is : RM%.2f" , total);
+		System.out.println("");
+		
+
+	}
+
+}
